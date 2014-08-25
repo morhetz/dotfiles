@@ -1,0 +1,36 @@
+# use alt as meta key
+
+alt + shift + q
+	herbstclient quit
+alt + shift + r
+	pkill -USR1 -x sxhkd
+
+alt + {q,r}
+	herbstclient {close_or_remove,reload}
+
+alt + {_,shift,ctrl} + {h,j,k,l}
+	herbstclient {focus,shift,resize} {left,down,up,right} +0.05
+alt + {_,shift} + {1,2,3,4,5,6,7,8}
+	herbstclient {use_index,move_index} {0,1,2,3,4,5,6,7}
+alt + {_,shift} + {n,p}
+	herbstclient {cycle_all,use_index} {+,-}1 --skip-visible
+{alt,super} + {_,shift} + Tab
+	herbstclient {cycle_all,use_index} {+,-}1 --skip-visible
+
+alt + {_,shift} + s
+	herbstclient split {h,v} 0.5
+alt + {_,shift} + a
+	herbstclient split {explode,auto}
+alt + {_,shift} + f
+	herbstclient {fullscreen,floating}
+alt + {_,shift} + g
+	herbstclient {cycle_layout,rotate}
+alt + {_,shift} + u
+	herbstclient {jumpto,bring} urgent
+
+# applications
+
+super + Return
+	lilyterm
+super + space
+	dmenu_run
