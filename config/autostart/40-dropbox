@@ -1,2 +1,0 @@
-# Autostart the Dropbox deamon
-~/.dropbox-dist/dropboxd &
